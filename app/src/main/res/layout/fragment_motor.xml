@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimary"
+            android:paddingRight="5dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginLeft="15dp"
+                android:textAllCaps="true"
+                style="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
+                android:textColor="#ffffff"
+                android:text="Daftar Motor"/>
+
+        <android.support.design.widget.FloatingActionButton
+                android:layout_marginRight="15dp"
+                android:id="@+id/fabClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_white_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                app:fabSize="mini"
+                app:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp">
+
+        <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:hint="Search"/>
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/titleDp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="Kode Motor"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Tipe Motor"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Harga Jual"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/recycler_fragment_motor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+    />
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true" />
+
+    <TextView
+            android:id="@+id/txt_no_data"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak Ada Data\nSilahkan Pilih Kategori Terlebih Dahulu Di Atas"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+    />
+</LinearLayout>
