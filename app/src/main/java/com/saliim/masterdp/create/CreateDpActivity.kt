@@ -119,7 +119,6 @@ class CreateDpActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         }
     }
 
-
     fun getKategoriMotor(onFinish: () -> Unit){
         API.getDataKategoriMotor().enqueue(object : Callback<ArrayList<DataMotorKategori>>{
             override fun onResponse(call: Call<ArrayList<DataMotorKategori>>, response: Response<ArrayList<DataMotorKategori>>) {
